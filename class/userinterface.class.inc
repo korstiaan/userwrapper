@@ -1,0 +1,43 @@
+<?php
+/**
+ *	User Wrapper
+ *  Copyright (C) 2011  Korstiaan de Ridder <korstiaan [at] korstiaan.com>
+ *
+ *	This file is part of User Wrapper.
+ *
+ *  User Wrapper is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  User Wrapper is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with User Wrapper.  If not, see <http://www.gnu.org/licenses/>.
+ */
+namespace UserWrapper;
+
+use EntityBase\EntityInterface;
+
+interface UserInterface extends EntityInterface
+{
+	/**
+	 * 
+	 * Returns true if user has anonymous role
+	 * 
+	 * @return		boolean
+	 */
+	public function isAnonymous();
+	
+	/**
+	 * 
+	 * Returns true if user has given role id
+	 * 
+	 * @param 	integer	 $role
+	 * @return	boolean
+	 */
+	public function hasRole($role);	
+}

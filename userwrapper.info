@@ -1,0 +1,6 @@
+name 			= "User wrapper"
+description 	= "User wrapper"
+core 			= "7.x"
+dependencies[] 	= entitybase
+dependencies[] 	= user
+php 			= 5.3.2
