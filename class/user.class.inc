@@ -19,7 +19,6 @@
  *  along with User Wrapper.  If not, see <http://www.gnu.org/licenses/>.
  */
 namespace UserWrapper;
-use UserWrapper\User;
 use EntityBase\EntityBase;
 
 class User extends EntityBase implements UserInterface
@@ -72,18 +71,6 @@ class User extends EntityBase implements UserInterface
 	 * @return	string
 	 */
 	public function getEntityType() { return self::TYPE; }
-	
-	/**
-	 * 
-	 * Returns the id of the user. 
-	 * 
-	 * @see 	EntityBase.EntityInterface::getId() 
-	 * @return	integer|boolean			uid if set, false otherwise
-	 */
-	public function getId()
-	{
-		return isset($this->getEntity()->uid) ? (int)$this->getEntity()->uid : false;
-	}
 	
 	/**
 	 * 
